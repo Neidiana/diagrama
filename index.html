@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Troca de Lâmpada</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            image-resolution: center;
+            text-align: center;
+            color: blue;
+            
+
+
+            
+        }
+    </style>
+    <script>
+        var lampadaAcesa = false; 
+        
+        function trocarLampada() {
+            var lampada = document.getElementById("lampada");
+
+            lampadaAcesa = !lampadaAcesa;
+
+            if (lampadaAcesa) {
+                lampada.src = "lampada-acessa.jpg";
+            } else {
+                lampada.src = "lampada-apagada.jpg";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Troca de Lâmpada</h1><br>
+    <p>Clique no botão para acender e apagar a luz:</p><br>
+    <button onclick="trocarLampada()">Trocar Lâmpada</button><br>
+    <img id="lampada" src="lampada-apagada.jpg" alt="Lâmpada Apagada" onclick="trocarLampada()">
+</body>
+
+</html>
+      
